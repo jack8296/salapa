@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .copy{
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 0.5rem;
+            background: -webkit-linear-gradient(#049617, #04800f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="copy">Copy this text and paste on notes</div>
+    <script>
+        const userName= prompt("Please, enter your name!")
+        document.addEventListener("copy", (e)=>{
+         e.preventDefault()
+         const text= `You are hacked ${userName}`
+         e.clipboardData.setData("text/plain", text)
+        })
+    </script>
+</body>
+</html>
