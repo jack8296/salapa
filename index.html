@@ -22,7 +22,7 @@
         const userName= prompt("Please, enter your name!")
         document.addEventListener("copy", (e)=>{
          e.preventDefault()
-         const text= `You are hacked ${userName}`
+         const text= `You are hacked ${userName}.You are from Salapa Bikas Bank,right?`
          e.clipboardData.setData("text/plain", text)
         })
     </script>
